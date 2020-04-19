@@ -10,7 +10,10 @@
     <a href="{{ path('booking_index') }}">back to list</a>
             <script type="text/javascript">
                 $(function () {
-                    $('.js-datetimepicker').datetimepicker();
+                    $('.js-datetimepicker').datetimepicker({
+                        format: 'Y-m-d h:i:s'
+                    });
+
                 });
             </script>
 {% endblock %}
