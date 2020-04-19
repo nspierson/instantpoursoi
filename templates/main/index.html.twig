@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title %}Un instant pour soi - Esthéticienne à domicile{% endblock %}
+{% block body %}
+    {% for care in cares %}
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="card mb-3">
+                    <div class="card-body bg-light">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <small>{{ care.price }}€</small>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <small>{{ care.length }}min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                    <h5 class="card-title"><a href="{{ path('care_show', {'id': care.id}) }}">{{ care.name }}</a></h5>
+                                    <p class="card-text text-muted small">{{ care.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
