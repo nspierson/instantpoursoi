@@ -9,11 +9,11 @@
 import '../css/app.css';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-import $ from 'jquery';
+// import $ from 'jquery';
 
 // require jQuery normally
-const $ = require('jquery');
+// const $ = require('jquery');
 
 // create global $ and jQuery variables
-    global.$ = global.jQuery = $;
+//    global.$ = global.jQuery = $;
 console.log('Hello Webpack Encore! Edit me in assets/js/app.js');

@@ -14,40 +14,51 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-base">
             <div class="container">
-                <a class="navbar-brand" href="/">Un instant pour soi</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        {% if app.user %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('new_care') }}">Nouveau soin</a>
-                            </li>
-                        {% else %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
-                            </li>
-                        {% endif %}
-                    </ul>
+                    <a class="navbar-brand" href="/">Un instant pour soi</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            {% if app.user %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('new_care') }}">Nouveau soin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('booking_new') }}">Prendre RDV</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <div class="container mt-4">
-            {% block body %}{% endblock %}
-        </div>
-        {% block javascripts %}{% endblock %}
+            </nav>
+        <div class="banner d-flex">
+            <div class="banner-left" style="background-image: url('https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/89835217_2604081399861064_5538186472210825216_n.jpg?_nc_cat=105&_nc_sid=dd9801&_nc_ohc=q0jesP67SxMAX-52gbY&_nc_ht=scontent-frx5-1.xx&oh=5158c29cf024ffa79fa6cecb79cd7657&oe=5EC14F40')">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js" integrity="sha256-RwTJwLtruVfpQ/9COgOgOoFtDQoDY92EqysD/ZMidS8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            </div>
+            <div class="banner-right" style="background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/61142452_2331499410452599_5316236413623074816_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_ohc=7MRHEHb_UjwAX_AErbC&_nc_ht=scontent-frt3-1.xx&oh=d5a74ddbc71c384dbdc82246e59f9476&oe=5EC0BE6A')">
+
+            </div>
+        </div>
+            <div class="container mt-4">
+                {% block body %}{% endblock %}
+            </div>
+            {% block javascripts %}{% endblock %}
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.js" integrity="sha256-RwTJwLtruVfpQ/9COgOgOoFtDQoDY92EqysD/ZMidS8=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
