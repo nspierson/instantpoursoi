@@ -1,13 +1,113 @@
 body {
-    background-color: lightgrey;
+    background-color: lightcyan;
 }
-
 .banner {
     height: 80vh;
-    width: 100vh;
+    width: 100vw;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 430px;
+    left: 100px;
+    color: white;
+    opacity: 0.9;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+}
+
+.banner-text h3 {
+    font-size: 30px;
+    opacity: 0.8;
+}
+
+.btn-ghost {
+    color: white;
+    border: 1px solid white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    bottom: 380px;
+    left: 250px;
+}
+
+.btn-ghost:hover {
+    color: white;
+    opacity: 1;
 }
 
 .navbar-base {
-    opacity: 0.7;
+    background-color: mistyrose;
+    opacity: 0.9;
+}
+
+.navbar-base a {
+    color: rosybrown;
+    opacity: 1;
+}
+
+.last-care {
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.last-care-spe {
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+    border-radius: 10px;
+    background-position: center;
+    margin-top: 15px;
+}
+
+.footer-mat {
+    background-color: mistyrose;
+    opacity: 0.9;
+    margin-top: 50px;
+}
+
+.footer-mat li {
+    list-style: none;
+    display: inline;
+    font-size: 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rose;
+}
+
+.footer-mat i {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-mat i:hover {
+    color: rosybrown;
+}
+
+#rdv {
+    font-size: 32px;
+}
+
+#rdv a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: mistyrose;
+    border: 2px solid mistyrose;
+    border-radius: 40px;
+    padding: 16px 32px;
+}
+
+
+#rdv a:hover {
+    color: rosybrown;
 }
