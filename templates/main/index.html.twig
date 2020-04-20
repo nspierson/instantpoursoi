@@ -5,8 +5,8 @@
         {% for care in cares %}
             <div class="row">
                 <div class="col-10 offset-1">
-                    <div class="card mb-3">
-                        <div class="card-body bg-light">
+                    <div class="mb-3">
+                        <div class="">
                             <div class="row">
                                 <div class="col">
                                     <div class="row">
@@ -19,7 +19,7 @@
                                     </div>
                                 </div>
                                 <div class="col-10">
-                                        <h5 class="card-title"><a href="{{ path('care_show', {'id': care.id}) }}">{{ care.name }}</a></h5>
+                                        <h5 class="card-title"><p>{{ care.name }}</p></h5>
                                         <p class="card-text text-muted small">{{ care.description }}</p>
                                 </div>
                             </div>
@@ -28,11 +28,20 @@
                 </div>
             </div>
         {% endfor %}
+    <p class="text-center" id="rdv"><a href="{{ path('booking_new') }}" class="">Prenez rendez-vous !</a></p>
     <h3 class="text-center">Mes dernières créations:</h3>
     <div class="container-last-care d-flex justify-content-around">
+        <div class="last-care" style="background-image: url('https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/66377277_2366082156994324_3753423330732933120_n.jpg?_nc_cat=100&_nc_sid=110474&_nc_ohc=Qeyuf9OqdisAX_zhJfR&_nc_ht=scontent-frx5-1.xx&oh=9b00fe944e6eb95d730508176f77a34e&oe=5EC14DD0')">
+        </div>
+        <div class="last-care-spe" style="background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/68736479_2392487487687124_5415273604940038144_n.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=mriI-M2nPyAAX_Ov4xO&_nc_ht=scontent-frt3-1.xx&oh=ad167150f30f484e8e7db02c2b992ab6&oe=5EC343A8')">
+        </div>
+    </div>
+    <div class="container-last-care d-flex justify-content-around">
         <div class="last-care" style="background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/61142452_2331499410452599_5316236413623074816_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_ohc=7MRHEHb_UjwAX_AErbC&_nc_ht=scontent-frt3-1.xx&oh=d5a74ddbc71c384dbdc82246e59f9476&oe=5EC0BE6A')">
+
         </div>
         <div class="last-care" style="background-image: url('https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/89835217_2604081399861064_5538186472210825216_n.jpg?_nc_cat=105&_nc_sid=dd9801&_nc_ohc=q0jesP67SxMAX-52gbY&_nc_ht=scontent-frx5-1.xx&oh=5158c29cf024ffa79fa6cecb79cd7657&oe=5EC14F40')">
+
         </div>
     </div>
 
