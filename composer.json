@@ -74,7 +74,7 @@
 
     "scripts": {
         "compile": [
-            "php bin/console doctrine:migrations:execute 20200420091113"
+            "php bin/console doctrine:migrations:migrate"
         ]
     }
 }
