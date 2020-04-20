@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-base">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-base fixed-top">
             <div class="container">
                     <a class="navbar-brand" href="/">Un instant pour soi</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
@@ -49,10 +49,16 @@
                 <h1>Un instant pour soi</h1>
                 <h3>Votre esthéticienne à domicile</h3>
             </div>
+            <a href="{{ path('booking_new') }}" class="btn btn-ghost">Prenez un RDV</a>
         </div>
             <div class="container mt-4">
                 {% block body %}{% endblock %}
             </div>
+            <footer class="footer-mat py-3">
+                <div class="container">
+                    <span class="text-muted">facebook insta here</span>
+                </div>
+            </footer>
             {% block javascripts %}{% endblock %}
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" crossorigin="anonymous"></script>

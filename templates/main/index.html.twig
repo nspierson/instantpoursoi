@@ -1,31 +1,39 @@
 {% extends 'base.html.twig' %}
 {% block title %}Un instant pour soi - Esthéticienne à domicile{% endblock %}
 {% block body %}
-<h3 class="text-center">Nos soins:</h3>
-    {% for care in cares %}
-        <div class="row">
-            <div class="col-10 offset-1">
-                <div class="card mb-3">
-                    <div class="card-body bg-light">
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col-6 text-center">
-                                        <small>{{ care.price }}€</small>
-                                    </div>
-                                    <div class="col-6 text-center">
-                                        <small>{{ care.length }}min</small>
+    <h3 class="text-center">La carte des soins:</h3>
+        {% for care in cares %}
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="card mb-3">
+                        <div class="card-body bg-light">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col-6 text-center">
+                                            <small>{{ care.price }}€</small>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <small>{{ care.length }}min</small>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-10">
-                                    <h5 class="card-title"><a href="{{ path('care_show', {'id': care.id}) }}">{{ care.name }}</a></h5>
-                                    <p class="card-text text-muted small">{{ care.description }}</p>
+                                <div class="col-10">
+                                        <h5 class="card-title"><a href="{{ path('care_show', {'id': care.id}) }}">{{ care.name }}</a></h5>
+                                        <p class="card-text text-muted small">{{ care.description }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        {% endfor %}
+    <h3 class="text-center">Mes dernières créations:</h3>
+    <div class="container-last-care d-flex justify-content-around">
+        <div class="last-care" style="background-image: url('https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/61142452_2331499410452599_5316236413623074816_n.jpg?_nc_cat=109&_nc_sid=110474&_nc_ohc=7MRHEHb_UjwAX_AErbC&_nc_ht=scontent-frt3-1.xx&oh=d5a74ddbc71c384dbdc82246e59f9476&oe=5EC0BE6A')">
         </div>
-    {% endfor %}
+        <div class="last-care" style="background-image: url('https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-9/89835217_2604081399861064_5538186472210825216_n.jpg?_nc_cat=105&_nc_sid=dd9801&_nc_ohc=q0jesP67SxMAX-52gbY&_nc_ht=scontent-frx5-1.xx&oh=5158c29cf024ffa79fa6cecb79cd7657&oe=5EC14F40')">
+        </div>
+    </div>
+
 {% endblock %}
